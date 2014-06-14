@@ -60,14 +60,8 @@ int main (void) {
   /* Enable AHB clock to the GPIO domain. */
   LPC_SYSCON->SYSAHBCLKCTRL |= (1<<6);
 
-  /* Set port p0.7 to output */
-  GPIOSetDir( 0, 7, 1 );
-
-	/* Set port p0.16 to output */
-  GPIOSetDir( 0, 16, 1 );
-
- /* Set port p0.17 to output */
-  GPIOSetDir( 0, 17, 1 );
+  /* Set port p0.0 to output */
+  GPIOSetDir( 0, 0, 1 );
 
 	init_mrt(0x8000);
 	
@@ -76,30 +70,12 @@ int main (void) {
 		/* I/O configuration and LED setting pending. */
 		if ( (mrt_counter > 0) && (mrt_counter <= 200) )
 		{
-			GPIOSetBitValue( 0, 7, 0 );
+			GPIOSetBitValue( 0, 0, 0 );
 		}
 		if ( (mrt_counter > 200) && (mrt_counter <= 400) )
 		{
-			GPIOSetBitValue( 0, 7, 1 );
+			GPIOSetBitValue( 0, 0, 1 );
 		}
-		if ( (mrt_counter > 400) && (mrt_counter <= 600) )
-		{
-			GPIOSetBitValue( 0, 16, 0 );
-		}
-		if ( (mrt_counter > 600) && (mrt_counter <= 800) )
-		{
-			GPIOSetBitValue( 0, 16, 1 );
-		}
-
-		if ( (mrt_counter > 800) && (mrt_counter <= 1000) )
-		{
-			GPIOSetBitValue( 0, 17, 0 );
-		}
-		if ( (mrt_counter > 1000) && (mrt_counter <= 1200) )
-		{
-			GPIOSetBitValue( 0, 17, 1 );
-		}
-
 		else if ( mrt_counter > 1200 )
 		{
 			mrt_counter = 0;
