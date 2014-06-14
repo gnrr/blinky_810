@@ -220,7 +220,7 @@ END GROUP
                 0x0000000000001000                __top_MFlash4 = 0x1000
                 0x0000000010000400                __top_RamLoc1 = 0x10000400
 
-.text           0x0000000000000000      0x778
+.text           0x0000000000000000      0x774
  FILL mask 0xff
                 0x0000000000000000                __vectors_start__ = ABSOLUTE (.)
  *(.isr_vector)
@@ -229,7 +229,7 @@ END GROUP
                 0x00000000000000c0                . = ALIGN (0x4)
                 0x00000000000000c0                __section_table_start = .
                 0x00000000000000c0                __data_section_table = .
-                0x00000000000000c0        0x4 LONG 0x778 LOADADDR (.data)
+                0x00000000000000c0        0x4 LONG 0x774 LOADADDR (.data)
                 0x00000000000000c4        0x4 LONG 0x10000000 ADDR (.data)
                 0x00000000000000c8        0x4 LONG 0x4 SIZEOF (.data)
                 0x00000000000000cc                __data_section_table_end = .
@@ -271,100 +271,100 @@ END GROUP
                 0x0000000000000300                PROVIDE (__CRP_WORD_END__, .)
                 0x0000000000000001                ASSERT (! ((__CRP_WORD_START__ == __CRP_WORD_END__)), Linker CRP Enabled, but no CRP_WORD provided within application)
  *(.text*)
- .text.main     0x0000000000000300       0x94 ./src/main.o
+ .text.main     0x0000000000000300       0x90 ./src/main.o
                 0x0000000000000300                main
  .text.CLKOUT_Setup
-                0x0000000000000394       0x28 /Users/g/Dropbox/test/xpresso/lpc800_driver_lib/Debug/liblpc800_driver_lib.a(lpc8xx_clkconfig.o)
-                0x0000000000000394                CLKOUT_Setup
+                0x0000000000000390       0x28 /Users/g/Dropbox/test/xpresso/lpc800_driver_lib/Debug/liblpc800_driver_lib.a(lpc8xx_clkconfig.o)
+                0x0000000000000390                CLKOUT_Setup
  .text.PININT_Handler
-                0x00000000000003bc      0x100 /Users/g/Dropbox/test/xpresso/lpc800_driver_lib/Debug/liblpc800_driver_lib.a(lpc8xx_gpio.o)
-                0x00000000000003bc                PININT_Handler
+                0x00000000000003b8      0x100 /Users/g/Dropbox/test/xpresso/lpc800_driver_lib/Debug/liblpc800_driver_lib.a(lpc8xx_gpio.o)
+                0x00000000000003b8                PININT_Handler
  .text.PININT0_IRQHandler
-                0x00000000000004bc        0xc /Users/g/Dropbox/test/xpresso/lpc800_driver_lib/Debug/liblpc800_driver_lib.a(lpc8xx_gpio.o)
-                0x00000000000004bc                PININT0_IRQHandler
+                0x00000000000004b8        0xc /Users/g/Dropbox/test/xpresso/lpc800_driver_lib/Debug/liblpc800_driver_lib.a(lpc8xx_gpio.o)
+                0x00000000000004b8                PININT0_IRQHandler
  .text.PININT1_IRQHandler
-                0x00000000000004c8        0xc /Users/g/Dropbox/test/xpresso/lpc800_driver_lib/Debug/liblpc800_driver_lib.a(lpc8xx_gpio.o)
-                0x00000000000004c8                PININT1_IRQHandler
+                0x00000000000004c4        0xc /Users/g/Dropbox/test/xpresso/lpc800_driver_lib/Debug/liblpc800_driver_lib.a(lpc8xx_gpio.o)
+                0x00000000000004c4                PININT1_IRQHandler
  .text.PININT2_IRQHandler
-                0x00000000000004d4        0xc /Users/g/Dropbox/test/xpresso/lpc800_driver_lib/Debug/liblpc800_driver_lib.a(lpc8xx_gpio.o)
-                0x00000000000004d4                PININT2_IRQHandler
+                0x00000000000004d0        0xc /Users/g/Dropbox/test/xpresso/lpc800_driver_lib/Debug/liblpc800_driver_lib.a(lpc8xx_gpio.o)
+                0x00000000000004d0                PININT2_IRQHandler
  .text.PININT4_IRQHandler
-                0x00000000000004e0        0xc /Users/g/Dropbox/test/xpresso/lpc800_driver_lib/Debug/liblpc800_driver_lib.a(lpc8xx_gpio.o)
-                0x00000000000004e0                PININT4_IRQHandler
+                0x00000000000004dc        0xc /Users/g/Dropbox/test/xpresso/lpc800_driver_lib/Debug/liblpc800_driver_lib.a(lpc8xx_gpio.o)
+                0x00000000000004dc                PININT4_IRQHandler
  .text.PININT5_IRQHandler
-                0x00000000000004ec        0xc /Users/g/Dropbox/test/xpresso/lpc800_driver_lib/Debug/liblpc800_driver_lib.a(lpc8xx_gpio.o)
-                0x00000000000004ec                PININT5_IRQHandler
+                0x00000000000004e8        0xc /Users/g/Dropbox/test/xpresso/lpc800_driver_lib/Debug/liblpc800_driver_lib.a(lpc8xx_gpio.o)
+                0x00000000000004e8                PININT5_IRQHandler
  .text.PININT6_IRQHandler
-                0x00000000000004f8        0xc /Users/g/Dropbox/test/xpresso/lpc800_driver_lib/Debug/liblpc800_driver_lib.a(lpc8xx_gpio.o)
-                0x00000000000004f8                PININT6_IRQHandler
+                0x00000000000004f4        0xc /Users/g/Dropbox/test/xpresso/lpc800_driver_lib/Debug/liblpc800_driver_lib.a(lpc8xx_gpio.o)
+                0x00000000000004f4                PININT6_IRQHandler
  .text.PININT7_IRQHandler
-                0x0000000000000504        0xc /Users/g/Dropbox/test/xpresso/lpc800_driver_lib/Debug/liblpc800_driver_lib.a(lpc8xx_gpio.o)
-                0x0000000000000504                PININT7_IRQHandler
+                0x0000000000000500        0xc /Users/g/Dropbox/test/xpresso/lpc800_driver_lib/Debug/liblpc800_driver_lib.a(lpc8xx_gpio.o)
+                0x0000000000000500                PININT7_IRQHandler
  .text.GPIOSetBitValue
-                0x0000000000000510       0x28 /Users/g/Dropbox/test/xpresso/lpc800_driver_lib/Debug/liblpc800_driver_lib.a(lpc8xx_gpio.o)
-                0x0000000000000510                GPIOSetBitValue
+                0x000000000000050c       0x28 /Users/g/Dropbox/test/xpresso/lpc800_driver_lib/Debug/liblpc800_driver_lib.a(lpc8xx_gpio.o)
+                0x000000000000050c                GPIOSetBitValue
  .text.GPIOSetDir
-                0x0000000000000538       0x30 /Users/g/Dropbox/test/xpresso/lpc800_driver_lib/Debug/liblpc800_driver_lib.a(lpc8xx_gpio.o)
-                0x0000000000000538                GPIOSetDir
+                0x0000000000000534       0x30 /Users/g/Dropbox/test/xpresso/lpc800_driver_lib/Debug/liblpc800_driver_lib.a(lpc8xx_gpio.o)
+                0x0000000000000534                GPIOSetDir
  .text.MRT_IRQHandler
-                0x0000000000000568       0x20 /Users/g/Dropbox/test/xpresso/lpc800_driver_lib/Debug/liblpc800_driver_lib.a(lpc8xx_mrt.o)
-                0x0000000000000568                MRT_IRQHandler
+                0x0000000000000564       0x20 /Users/g/Dropbox/test/xpresso/lpc800_driver_lib/Debug/liblpc800_driver_lib.a(lpc8xx_mrt.o)
+                0x0000000000000564                MRT_IRQHandler
  .text.init_mrt
-                0x0000000000000588       0x4c /Users/g/Dropbox/test/xpresso/lpc800_driver_lib/Debug/liblpc800_driver_lib.a(lpc8xx_mrt.o)
-                0x0000000000000588                init_mrt
+                0x0000000000000584       0x4c /Users/g/Dropbox/test/xpresso/lpc800_driver_lib/Debug/liblpc800_driver_lib.a(lpc8xx_mrt.o)
+                0x0000000000000584                init_mrt
  .text.SystemCoreClockUpdate
-                0x00000000000005d4       0x84 /Users/g/Dropbox/test/xpresso/CMSIS_CORE_LPC8xx/Debug/libCMSIS_CORE_LPC8xx.a(system_LPC8xx.o)
-                0x00000000000005d4                SystemCoreClockUpdate
+                0x00000000000005d0       0x84 /Users/g/Dropbox/test/xpresso/CMSIS_CORE_LPC8xx/Debug/libCMSIS_CORE_LPC8xx.a(system_LPC8xx.o)
+                0x00000000000005d0                SystemCoreClockUpdate
  .text.SystemInit
-                0x0000000000000658       0x40 /Users/g/Dropbox/test/xpresso/CMSIS_CORE_LPC8xx/Debug/libCMSIS_CORE_LPC8xx.a(system_LPC8xx.o)
-                0x0000000000000658                SystemInit
+                0x0000000000000654       0x40 /Users/g/Dropbox/test/xpresso/CMSIS_CORE_LPC8xx/Debug/libCMSIS_CORE_LPC8xx.a(system_LPC8xx.o)
+                0x0000000000000654                SystemInit
  .text.__weak_main
-                0x0000000000000698        0x8 /Applications/lpcxpresso_7.2.0_153/lpcxpresso/tools/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/armv6-m/libcr_c.a(__weak__main.o)
-                0x0000000000000698                __main
-                0x0000000000000698                __weak_main
+                0x0000000000000694        0x8 /Applications/lpcxpresso_7.2.0_153/lpcxpresso/tools/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/armv6-m/libcr_c.a(__weak__main.o)
+                0x0000000000000694                __main
+                0x0000000000000694                __weak_main
  .text.__aeabi_division_idivmod
-                0x00000000000006a0       0x78 /Applications/lpcxpresso_7.2.0_153/lpcxpresso/tools/bin/../lib/gcc/arm-none-eabi/4.8.3/armv6-m/libcr_eabihelpers.a(division_32.o)
-                0x00000000000006a0                __aeabi_idiv
-                0x00000000000006a0                __aeabi_idivmod
-                0x00000000000006a6                __aeabi_uidiv
-                0x00000000000006a6                __aeabi_uidivmod
+                0x000000000000069c       0x78 /Applications/lpcxpresso_7.2.0_153/lpcxpresso/tools/bin/../lib/gcc/arm-none-eabi/4.8.3/armv6-m/libcr_eabihelpers.a(division_32.o)
+                0x000000000000069c                __aeabi_idiv
+                0x000000000000069c                __aeabi_idivmod
+                0x00000000000006a2                __aeabi_uidiv
+                0x00000000000006a2                __aeabi_uidivmod
  .text.__aeabi_division_idiv0
-                0x0000000000000718        0x2 /Applications/lpcxpresso_7.2.0_153/lpcxpresso/tools/bin/../lib/gcc/arm-none-eabi/4.8.3/armv6-m/libcr_eabihelpers.a(division_idiv0.o)
-                0x0000000000000718                __aeabi_idiv0
+                0x0000000000000714        0x2 /Applications/lpcxpresso_7.2.0_153/lpcxpresso/tools/bin/../lib/gcc/arm-none-eabi/4.8.3/armv6-m/libcr_eabihelpers.a(division_idiv0.o)
+                0x0000000000000714                __aeabi_idiv0
  *(.rodata .rodata.* .constdata .constdata.*)
- *fill*         0x000000000000071a        0x2 
+ *fill*         0x0000000000000716        0x2 
  .rodata.PININT_Handler
-                0x000000000000071c       0x20 /Users/g/Dropbox/test/xpresso/lpc800_driver_lib/Debug/liblpc800_driver_lib.a(lpc8xx_gpio.o)
+                0x0000000000000718       0x20 /Users/g/Dropbox/test/xpresso/lpc800_driver_lib/Debug/liblpc800_driver_lib.a(lpc8xx_gpio.o)
  .rodata.CSWTCH.6
-                0x000000000000073c       0x3c /Users/g/Dropbox/test/xpresso/CMSIS_CORE_LPC8xx/Debug/libCMSIS_CORE_LPC8xx.a(system_LPC8xx.o)
-                0x0000000000000778                . = ALIGN (0x4)
+                0x0000000000000738       0x3c /Users/g/Dropbox/test/xpresso/CMSIS_CORE_LPC8xx/Debug/libCMSIS_CORE_LPC8xx.a(system_LPC8xx.o)
+                0x0000000000000774                . = ALIGN (0x4)
 
-.glue_7         0x0000000000000778        0x0
+.glue_7         0x0000000000000774        0x0
  .glue_7        0x0000000000000000        0x0 linker stubs
 
-.glue_7t        0x0000000000000778        0x0
+.glue_7t        0x0000000000000774        0x0
  .glue_7t       0x0000000000000000        0x0 linker stubs
 
-.vfp11_veneer   0x0000000000000778        0x0
+.vfp11_veneer   0x0000000000000774        0x0
  .vfp11_veneer  0x0000000000000000        0x0 linker stubs
 
-.v4_bx          0x0000000000000778        0x0
+.v4_bx          0x0000000000000774        0x0
  .v4_bx         0x0000000000000000        0x0 linker stubs
 
-.iplt           0x0000000000000778        0x0
+.iplt           0x0000000000000774        0x0
  .iplt          0x0000000000000000        0x0 ./src/cr_startup_lpc8xx.o
 
-.rel.dyn        0x0000000000000778        0x0
+.rel.dyn        0x0000000000000774        0x0
  .rel.iplt      0x0000000000000000        0x0 ./src/cr_startup_lpc8xx.o
 
 .ARM.extab
  *(.ARM.extab* .gnu.linkonce.armextab.*)
-                0x0000000000000778                __exidx_start = .
+                0x0000000000000774                __exidx_start = .
 
 .ARM.exidx
  *(.ARM.exidx* .gnu.linkonce.armexidx.*)
-                0x0000000000000778                __exidx_end = .
-                0x0000000000000778                _etext = .
+                0x0000000000000774                __exidx_end = .
+                0x0000000000000774                _etext = .
 
 .mtb_buffer_default
  *(.mtb*)
@@ -375,7 +375,7 @@ END GROUP
                 0x0000000010000000                . = ALIGN (0x4)
                 0x0000000010000000                _end_uninit_RESERVED = .
 
-.data           0x0000000010000000        0x4 load address 0x0000000000000778
+.data           0x0000000010000000        0x4 load address 0x0000000000000774
  FILL mask 0xff
                 0x0000000010000000                _data = .
  *(vtable)
@@ -387,10 +387,10 @@ END GROUP
                 0x0000000010000004                . = ALIGN (0x4)
                 0x0000000010000004                _edata = .
 
-.igot.plt       0x0000000010000004        0x0 load address 0x000000000000077c
+.igot.plt       0x0000000010000004        0x0 load address 0x0000000000000778
  .igot.plt      0x0000000000000000        0x0 ./src/cr_startup_lpc8xx.o
 
-.bss            0x0000000010000004       0x84 load address 0x000000000000077c
+.bss            0x0000000010000004       0x84 load address 0x0000000000000778
                 0x0000000010000004                _bss = .
  *(.bss*)
  .bss.flex_int_falling_edge_counter
@@ -413,7 +413,7 @@ END GROUP
                 0x0000000010000088                _ebss = .
                 0x0000000010000088                PROVIDE (end, .)
 
-.noinit         0x0000000010000088        0x0 load address 0x000000000000077c
+.noinit         0x0000000010000088        0x0 load address 0x0000000000000778
                 0x0000000010000088                _noinit = .
  *(.noinit*)
                 0x0000000010000088                . = ALIGN (0x4)

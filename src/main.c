@@ -70,11 +70,11 @@ int main (void) {
 		/* I/O configuration and LED setting pending. */
 		if ( (mrt_counter > 0) && (mrt_counter <= 500) )
 		{
-			GPIOSetBitValue( 0, 0, 0 );
+			GPIOSetBitValue( 0, 0, 0 );	// output: LO
 		}
-		if ( (mrt_counter > 500) && (mrt_counter <= 1000) )
+		if ( (mrt_counter > 800) && (mrt_counter <= 1000) )
 		{
-			GPIOSetBitValue( 0, 0, 1 );
+			GPIOSetBitValue( 0, 0, 1 ); // output: HI
 		}
 		else if ( mrt_counter > 1000 )	// cycle: 1000ms
 		{
