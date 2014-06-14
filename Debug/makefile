@@ -26,8 +26,8 @@ endif
 all: blinky_810.axf
 
 dependents:
-	-cd /Users/g/Dropbox/test/xpresso/CMSIS_CORE_LPC8xx/Debug && $(MAKE) clean all
-	-cd /Users/g/Dropbox/test/xpresso/lpc800_driver_lib/Debug && $(MAKE) clean all
+	-cd /Users/g/Dropbox/test/xpresso/CMSIS_CORE_LPC8xx/Debug && $(MAKE) all
+	-cd /Users/g/Dropbox/test/xpresso/lpc800_driver_lib/Debug && $(MAKE) all
 
 # Tool invocations
 blinky_810.axf: $(OBJS) $(USER_OBJS) /Users/g/Dropbox/test/xpresso/CMSIS_CORE_LPC8xx/Debug/libCMSIS_CORE_LPC8xx.a /Users/g/Dropbox/test/xpresso/lpc800_driver_lib/Debug/liblpc800_driver_lib.a

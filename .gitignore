@@ -1,1 +1,8 @@
 *.launch
+*.ld
+*.map
+makefile
+*.mk
+*.d
+*.o
+
