@@ -52,7 +52,7 @@ int main (void) {
   LPC_SWM->PINASSIGN8 = regVal | ( 12 << 16 );	/* P0.12 is CLKOUT, ASSIGN(23:16). */
   CLKOUT_Setup( CLKOUTCLK_SRC_MAIN_CLK );
 
-	#if 0
+#if 0
 	regVal = LPC_SWM->PINASSIGN0 & ~( (0xFF << 0) | (0xFF << 8) );
 	LPC_SWM->PINASSIGN0 = regVal | ( (2 << 0) | (3 << 8) );	/* P0.2 is UART0 TX, ASSIGN(7:0); P0.3 is UART0 RX. ASSIGN(15:8). */
 #endif
@@ -68,15 +68,15 @@ int main (void) {
   while (1)                                /* Loop forever */
   {
 		/* I/O configuration and LED setting pending. */
-		if ( (mrt_counter > 0) && (mrt_counter <= 200) )
+		if ( (mrt_counter > 0) && (mrt_counter <= 500) )
 		{
 			GPIOSetBitValue( 0, 0, 0 );
 		}
-		if ( (mrt_counter > 200) && (mrt_counter <= 400) )
+		if ( (mrt_counter > 500) && (mrt_counter <= 1000) )
 		{
 			GPIOSetBitValue( 0, 0, 1 );
 		}
-		else if ( mrt_counter > 1200 )
+		else if ( mrt_counter > 1000 )	// cycle: 1000ms
 		{
 			mrt_counter = 0;
 		}
